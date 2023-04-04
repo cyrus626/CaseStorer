@@ -1,0 +1,35 @@
+﻿<Window x:Class="EFCC.Models.AdminLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EFCC.Models"
+        mc:Ignorable="d"
+        Title="AdminLogin" Height="450" Width="800">
+    <Grid>
+        <Border Width="500" BorderThickness="1" TextBlock.FontSize="30" Margin="40">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                <Grid>
+                    <StackPanel Name="LoginPage" Visibility="Visible">
+                        <Label HorizontalAlignment="Center">Admin Login</Label>
+                        <DockPanel Margin="10">
+                            <Label>Password</Label>
+                            <PasswordBox Name="PasswordTextBox" ToolTip="Enter your password for only admin now"/>
+                        </DockPanel>
+                        <Button Click="LoginButton_Click"  Margin="90, 30" Name="LoginButton" Padding="5">Login</Button>
+                    </StackPanel>
+                    <StackPanel Name="SignUpPage" Visibility="Hidden">
+                        <Label HorizontalAlignment="Center">Sign Up</Label>
+                        <Label>Users Name</Label>
+                        <TextBox Name="UserNameText" ToolTip="Enter your user's name"></TextBox>
+                        <Label>Enter Password</Label>
+                        <TextBox Name="Password1" ToolTip="Enter your password"/>
+                        <Label>Re-enter Password</Label>
+                        <TextBox Name="Password2" ToolTip="Confirm your password"/>
+                        <Button Click="SaveData_Click" Name="SaveData">Complete setup</Button>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>

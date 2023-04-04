@@ -1,0 +1,28 @@
+﻿<Window x:Class="EFCC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EFCC"
+        mc:Ignorable="d"
+        Title="EFCC" Height="470" Width="800" >
+    <Grid>
+        <Border Width="500" BorderThickness="1" TextBlock.FontSize="30" Margin="40">
+            <StackPanel>
+                <DockPanel Margin="10">
+                    <Label>User's Name</Label>
+                    <TextBox Name="UserNameTextBox" ToolTip="Enter user's name"/>
+                </DockPanel>
+                <DockPanel Margin="10">
+                    <Label>Password</Label>
+                    <PasswordBox Name="PasswordTextBox" 
+                                 ToolTip="Enter your password"/>
+                </DockPanel>
+                <Button Click="LoginButton_Click" Margin="90, 30"
+                        Name="LoginButton" Padding="5">Login</Button>
+                <Button Background="White" Margin="90, 10" Click="SignUp_Click" 
+                        Name="SignUp">Get a password</Button>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
